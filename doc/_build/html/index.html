@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to sphinxcontrib-bitfield’s documentation! &mdash; sphinxcontrib-bitfield 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="sphinxcontrib-bitfield 0.1.0 documentation" href="#" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-sphinxcontrib-bitfield-s-documentation">
+<h1>Welcome to sphinxcontrib-bitfield&#8217;s documentation!<a class="headerlink" href="#welcome-to-sphinxcontrib-bitfield-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>pip install sphinxcontrib-bitfield
+</pre></div>
+</div>
+</div>
+<div class="section" id="enable-extension">
+<h2>Enable Extension<a class="headerlink" href="#enable-extension" title="Permalink to this headline">¶</a></h2>
+<p>Add <cite>sphinxcontrib.bitfield</cite> in <cite>extensions</cite> of <cite>conf.py</cite>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinxcontrib.bitfield&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Use directive <cite>bitfield</cite> with the description of the bitfield in JSON format:</p>
+<div class="highlight-python"><div class="highlight"><pre>.. bitfield::
+    :bits: 32
+    :lanes: 2
+
+        [
+            { &quot;name&quot;: &quot;IPO&quot;,   &quot;bits&quot;: 8, &quot;attr&quot;: &quot;RO&quot; },
+            {                  &quot;bits&quot;: 7 },
+            { &quot;name&quot;: &quot;BRK&quot;,   &quot;bits&quot;: 5, &quot;attr&quot;: &quot;RW&quot;, &quot;type&quot;: 4 },
+            { &quot;name&quot;: &quot;CPK&quot;,   &quot;bits&quot;: 1 },
+            { &quot;name&quot;: &quot;Clear&quot;, &quot;bits&quot;: 3 },
+            { &quot;bits&quot;: 8 }
+        ]
+</pre></div>
+</div>
+<svg width="649" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 649 165" height="165"><g transform="translate(4.5, 80.5)"><g stroke-width="1" stroke="black" stroke-linecap="round" transform="translate(0, 20.0)"><line x2="640"/><line y2="40.0"/><line x1="0" y2="40.0" y1="40.0" x2="640"/><line x1="640.0" y2="40.0" x2="640.0"/><line x1="600.0" y2="5.0" x2="600.0"/><line x1="600.0" y2="5.0" x2="600.0"/><line x1="560.0" y2="5.0" x2="560.0"/><line x1="560.0" y2="5.0" x2="560.0"/><line x1="520.0" y2="5.0" x2="520.0"/><line x1="520.0" y2="5.0" x2="520.0"/><line x1="480.0" y2="5.0" x2="480.0"/><line x1="480.0" y2="5.0" x2="480.0"/><line x1="440.0" y2="5.0" x2="440.0"/><line x1="440.0" y2="5.0" x2="440.0"/><line x1="400.0" y2="5.0" x2="400.0"/><line x1="400.0" y2="5.0" x2="400.0"/><line x1="360.0" y2="5.0" x2="360.0"/><line x1="360.0" y2="5.0" x2="360.0"/><line x1="320.0" y2="40.0" x2="320.0"/><line x1="280.0" y2="5.0" x2="280.0"/><line x1="280.0" y2="5.0" x2="280.0"/><line x1="240.0" y2="5.0" x2="240.0"/><line x1="240.0" y2="5.0" x2="240.0"/><line x1="200.0" y2="5.0" x2="200.0"/><line x1="200.0" y2="5.0" x2="200.0"/><line x1="160.0" y2="5.0" x2="160.0"/><line x1="160.0" y2="5.0" x2="160.0"/><line x1="120.0" y2="5.0" x2="120.0"/><line x1="120.0" y2="5.0" x2="120.0"/><line x1="80.0" y2="5.0" x2="80.0"/><line x1="80.0" y2="5.0" x2="80.0"/><line x1="40.0" y2="40.0" x2="40.0"/></g><g text-anchor="middle"><g ><g transform="translate(0, 20.0)"><rect width="280.0" height="40.0" x="40.0" style="fill-opacity:0.1" y="0"/><rect width="40.0" height="40.0" x="0.0" style="fill-opacity:0.1;fill:hsl(170,100%,50%)" y="0"/></g><g transform="translate(20.0, 16.0)"><text font-weight="normal" x="600.0" font-family="sans-serif" font-size="14">0</text><text font-weight="normal" x="320.0" font-family="sans-serif" font-size="14">7</text><text font-weight="normal" x="280.0" font-family="sans-serif" font-size="14">8</text><text font-weight="normal" x="40.0" font-family="sans-serif" font-size="14">14</text><text font-weight="normal" x="0.0" font-family="sans-serif" font-size="14">15</text></g><g transform="translate(20.0, 44.0)"><text font-weight="normal" x="460.0" font-family="sans-serif" font-size="14"><tspan >IPO</tspan></text><text font-weight="normal" x="0.0" font-family="sans-serif" font-size="14"><tspan >BRK</tspan></text></g><g transform="translate(20.0, 80)"><text font-weight="normal" x="460.0" font-family="sans-serif" font-size="14"><tspan >RO</tspan></text><text font-weight="normal" x="0.0" font-family="sans-serif" font-size="14"><tspan >RW</tspan></text></g></g></g></g><g transform="translate(4.5, 0.5)"><g stroke-width="1" stroke="black" stroke-linecap="round" transform="translate(0, 20.0)"><line x2="640"/><line y2="40.0"/><line x1="0" y2="40.0" y1="40.0" x2="640"/><line x1="640.0" y2="40.0" x2="640.0"/><line x1="600.0" y2="5.0" x2="600.0"/><line x1="600.0" y2="5.0" x2="600.0"/><line x1="560.0" y2="5.0" x2="560.0"/><line x1="560.0" y2="5.0" x2="560.0"/><line x1="520.0" y2="5.0" x2="520.0"/><line x1="520.0" y2="5.0" x2="520.0"/><line x1="480.0" y2="40.0" x2="480.0"/><line x1="440.0" y2="40.0" x2="440.0"/><line x1="400.0" y2="5.0" x2="400.0"/><line x1="400.0" y2="5.0" x2="400.0"/><line x1="360.0" y2="5.0" x2="360.0"/><line x1="360.0" y2="5.0" x2="360.0"/><line x1="320.0" y2="40.0" x2="320.0"/><line x1="280.0" y2="5.0" x2="280.0"/><line x1="280.0" y2="5.0" x2="280.0"/><line x1="240.0" y2="5.0" x2="240.0"/><line x1="240.0" y2="5.0" x2="240.0"/><line x1="200.0" y2="5.0" x2="200.0"/><line x1="200.0" y2="5.0" x2="200.0"/><line x1="160.0" y2="5.0" x2="160.0"/><line x1="160.0" y2="5.0" x2="160.0"/><line x1="120.0" y2="5.0" x2="120.0"/><line x1="120.0" y2="5.0" x2="120.0"/><line x1="80.0" y2="5.0" x2="80.0"/><line x1="80.0" y2="5.0" x2="80.0"/><line x1="40.0" y2="5.0" x2="40.0"/><line x1="40.0" y2="5.0" x2="40.0"/></g><g text-anchor="middle"><g ><g transform="translate(0, 20.0)"><rect width="160.0" height="40.0" x="480.0" style="fill-opacity:0.1;fill:hsl(170,100%,50%)" y="0"/><rect width="320.0" height="40.0" x="0.0" style="fill-opacity:0.1" y="0"/></g><g transform="translate(20.0, 16.0)"><text font-weight="normal" x="600.0" font-family="sans-serif" font-size="14">16</text><text font-weight="normal" x="480.0" font-family="sans-serif" font-size="14">19</text><text font-weight="normal" x="440.0" font-family="sans-serif" font-size="14">20</text><text font-weight="normal" x="400.0" font-family="sans-serif" font-size="14">21</text><text font-weight="normal" x="320.0" font-family="sans-serif" font-size="14">23</text><text font-weight="normal" x="280.0" font-family="sans-serif" font-size="14">24</text><text font-weight="normal" x="0.0" font-family="sans-serif" font-size="14">31</text></g><g transform="translate(20.0, 44.0)"><text font-weight="normal" x="540.0" font-family="sans-serif" font-size="14"><tspan >BRK</tspan></text><text font-weight="normal" x="440.0" font-family="sans-serif" font-size="14"><tspan >CPK</tspan></text><text font-weight="normal" x="360.0" font-family="sans-serif" font-size="14"><tspan >Clear</tspan></text></g><g transform="translate(20.0, 80)"><text font-weight="normal" x="540.0" font-family="sans-serif" font-size="14"><tspan >RW</tspan></text></g></g></g></g></svg><dl class="docutils">
+<dt>The <cite>bitfield</cite> directive accepts the following options:</dt>
+<dd><dl class="first last docutils">
+<dt>vspace:</dt>
+<dd>vertical space - default 80</dd>
+<dt>hspace:</dt>
+<dd>horizontal space - default 640</dd>
+<dt>lanes:</dt>
+<dd>rectangle lanes - default 2</dd>
+<dt>bits:</dt>
+<dd>overall bitwidth - default 32</dd>
+<dt>endianness:</dt>
+<dd>default <cite>little</cite>, non implemented</dd>
+<dt>fontfamily:</dt>
+<dd>default sans-serif</dd>
+<dt>fontweight:</dt>
+<dd>default normal</dd>
+<dt>fontsize:</dt>
+<dd>default 14</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<svg width="649" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 649 85" height="85"><g transform="translate(4.5, 0.5)"><g stroke-width="1" stroke="black" stroke-linecap="round" transform="translate(0, 20.0)"><line x2="640"/><line y2="40.0"/><line x1="0" y2="40.0" y1="40.0" x2="640"/><line x1="640.0" y2="40.0" x2="640.0"/><line x1="560.0" y2="40.0" x2="560.0"/><line x1="480.0" y2="40.0" x2="480.0"/><line x1="400.0" y2="40.0" x2="400.0"/><line x1="320.0" y2="40.0" x2="320.0"/><line x1="240.0" y2="40.0" x2="240.0"/><line x1="160.0" y2="40.0" x2="160.0"/><line x1="80.0" y2="40.0" x2="80.0"/></g><g text-anchor="middle"><g ><g transform="translate(0, 20.0)"/><g transform="translate(40.0, 16.0)"><text font-weight="normal" x="560.0" font-family="sans-serif" font-size="14">0</text><text font-weight="normal" x="480.0" font-family="sans-serif" font-size="14">1</text><text font-weight="normal" x="400.0" font-family="sans-serif" font-size="14">2</text><text font-weight="normal" x="320.0" font-family="sans-serif" font-size="14">3</text><text font-weight="normal" x="240.0" font-family="sans-serif" font-size="14">4</text><text font-weight="normal" x="160.0" font-family="sans-serif" font-size="14">5</text><text font-weight="normal" x="80.0" font-family="sans-serif" font-size="14">6</text><text font-weight="normal" x="0.0" font-family="sans-serif" font-size="14">7</text></g><g transform="translate(40.0, 44.0)"><text font-weight="normal" x="560.0" font-family="sans-serif" font-size="14"><tspan >C</tspan></text><text font-weight="normal" x="480.0" font-family="sans-serif" font-size="14"><tspan >Z</tspan></text><text font-weight="normal" x="400.0" font-family="sans-serif" font-size="14"><tspan >N</tspan></text><text font-weight="normal" x="320.0" font-family="sans-serif" font-size="14"><tspan >V</tspan></text><text font-weight="normal" x="240.0" font-family="sans-serif" font-size="14"><tspan >S</tspan></text><text font-weight="normal" x="160.0" font-family="sans-serif" font-size="14"><tspan >H</tspan></text><text font-weight="normal" x="80.0" font-family="sans-serif" font-size="14"><tspan >T</tspan></text><text font-weight="normal" x="0.0" font-family="sans-serif" font-size="14"><tspan >I</tspan></text></g><g transform="translate(40.0, 80)"/></g></g></g></svg><div class="highlight-python"><div class="highlight"><pre>.. bitfield::
+    :bits: 8
+    :lanes: 1
+
+        [
+            { &quot;name&quot;: &quot;C&quot;,   &quot;bits&quot;: 1},
+            { &quot;name&quot;: &quot;Z&quot;,   &quot;bits&quot;: 1},
+            { &quot;name&quot;: &quot;N&quot;,   &quot;bits&quot;: 1},
+            { &quot;name&quot;: &quot;V&quot;,   &quot;bits&quot;: 1},
+            { &quot;name&quot;: &quot;S&quot;,   &quot;bits&quot;: 1},
+            { &quot;name&quot;: &quot;H&quot;,   &quot;bits&quot;: 1},
+            { &quot;name&quot;: &quot;T&quot;,   &quot;bits&quot;: 1},
+            { &quot;name&quot;: &quot;I&quot;,   &quot;bits&quot;: 1}
+        ]
+</pre></div>
+</div>
+<svg width="649" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 649 85" height="85"><g transform="translate(4.5, 0.5)"><g stroke-width="1" stroke="black" stroke-linecap="round" transform="translate(0, 20.0)"><line x2="640"/><line y2="40.0"/><line x1="0" y2="40.0" y1="40.0" x2="640"/><line x1="640.0" y2="40.0" x2="640.0"/><line x1="620.0" y2="5.0" x2="620.0"/><line x1="620.0" y2="5.0" x2="620.0"/><line x1="600.0" y2="5.0" x2="600.0"/><line x1="600.0" y2="5.0" x2="600.0"/><line x1="580.0" y2="5.0" x2="580.0"/><line x1="580.0" y2="5.0" x2="580.0"/><line x1="560.0" y2="5.0" x2="560.0"/><line x1="560.0" y2="5.0" x2="560.0"/><line x1="540.0" y2="40.0" x2="540.0"/><line x1="520.0" y2="40.0" x2="520.0"/><line x1="500.0" y2="40.0" x2="500.0"/><line x1="480.0" y2="40.0" x2="480.0"/><line x1="460.0" y2="40.0" x2="460.0"/><line x1="440.0" y2="40.0" x2="440.0"/><line x1="420.0" y2="5.0" x2="420.0"/><line x1="420.0" y2="5.0" x2="420.0"/><line x1="400.0" y2="5.0" x2="400.0"/><line x1="400.0" y2="5.0" x2="400.0"/><line x1="380.0" y2="5.0" x2="380.0"/><line x1="380.0" y2="5.0" x2="380.0"/><line x1="360.0" y2="5.0" x2="360.0"/><line x1="360.0" y2="5.0" x2="360.0"/><line x1="340.0" y2="5.0" x2="340.0"/><line x1="340.0" y2="5.0" x2="340.0"/><line x1="320.0" y2="40.0" x2="320.0"/><line x1="300.0" y2="5.0" x2="300.0"/><line x1="300.0" y2="5.0" x2="300.0"/><line x1="280.0" y2="5.0" x2="280.0"/><line x1="280.0" y2="5.0" x2="280.0"/><line x1="260.0" y2="5.0" x2="260.0"/><line x1="260.0" y2="5.0" x2="260.0"/><line x1="240.0" y2="40.0" x2="240.0"/><line x1="220.0" y2="5.0" x2="220.0"/><line x1="220.0" y2="5.0" x2="220.0"/><line x1="200.0" y2="5.0" x2="200.0"/><line x1="200.0" y2="5.0" x2="200.0"/><line x1="180.0" y2="5.0" x2="180.0"/><line x1="180.0" y2="5.0" x2="180.0"/><line x1="160.0" y2="40.0" x2="160.0"/><line x1="140.0" y2="40.0" x2="140.0"/><line x1="120.0" y2="5.0" x2="120.0"/><line x1="120.0" y2="5.0" x2="120.0"/><line x1="100.0" y2="40.0" x2="100.0"/><line x1="80.0" y2="40.0" x2="80.0"/><line x1="60.0" y2="40.0" x2="60.0"/><line x1="40.0" y2="40.0" x2="40.0"/><line x1="20.0" y2="40.0" x2="20.0"/></g><g text-anchor="middle"><g ><g transform="translate(0, 20.0)"><rect width="120.0" height="40.0" x="320.0" style="fill-opacity:0.1;fill:hsl(0,100%,50%)" y="0"/><rect width="80.0" height="40.0" x="160.0" style="fill-opacity:0.1" y="0"/><rect width="40.0" height="40.0" x="100.0" style="fill-opacity:0.1;fill:hsl(0,100%,50%)" y="0"/></g><g transform="translate(10.0, 16.0)"><text font-weight="normal" x="620.0" font-family="sans-serif" font-size="14">0</text><text font-weight="normal" x="540.0" font-family="sans-serif" font-size="14">4</text><text font-weight="normal" x="520.0" font-family="sans-serif" font-size="14">5</text><text font-weight="normal" x="500.0" font-family="sans-serif" font-size="14">6</text><text font-weight="normal" x="480.0" font-family="sans-serif" font-size="14">7</text><text font-weight="normal" x="460.0" font-family="sans-serif" font-size="14">8</text><text font-weight="normal" x="440.0" font-family="sans-serif" font-size="14">9</text><text font-weight="normal" x="420.0" font-family="sans-serif" font-size="14">10</text><text font-weight="normal" x="320.0" font-family="sans-serif" font-size="14">15</text><text font-weight="normal" x="300.0" font-family="sans-serif" font-size="14">16</text><text font-weight="normal" x="240.0" font-family="sans-serif" font-size="14">19</text><text font-weight="normal" x="220.0" font-family="sans-serif" font-size="14">20</text><text font-weight="normal" x="160.0" font-family="sans-serif" font-size="14">23</text><text font-weight="normal" x="140.0" font-family="sans-serif" font-size="14">24</text><text font-weight="normal" x="120.0" font-family="sans-serif" font-size="14">25</text><text font-weight="normal" x="100.0" font-family="sans-serif" font-size="14">26</text><text font-weight="normal" x="80.0" font-family="sans-serif" font-size="14">27</text><text font-weight="normal" x="60.0" font-family="sans-serif" font-size="14">28</text><text font-weight="normal" x="40.0" font-family="sans-serif" font-size="14">29</text><text font-weight="normal" x="20.0" font-family="sans-serif" font-size="14">30</text><text font-weight="normal" x="0.0" font-family="sans-serif" font-size="14">31</text></g><g transform="translate(10.0, 44.0)"><text font-weight="normal" x="580.0" font-family="sans-serif" font-size="14"><tspan >M</tspan></text><text font-weight="normal" x="520.0" font-family="sans-serif" font-size="14"><tspan >T</tspan></text><text font-weight="normal" x="500.0" font-family="sans-serif" font-size="14"><tspan >F</tspan></text><text font-weight="normal" x="480.0" font-family="sans-serif" font-size="14"><tspan >I</tspan></text><text font-weight="normal" x="460.0" font-family="sans-serif" font-size="14"><tspan >A</tspan></text><text font-weight="normal" x="440.0" font-family="sans-serif" font-size="14"><tspan >E</tspan></text><text font-weight="normal" x="370.0" font-family="sans-serif" font-size="14"><tspan >IT</tspan></text><text font-weight="normal" x="270.0" font-family="sans-serif" font-size="14"><tspan >GE</tspan></text><text font-weight="normal" x="140.0" font-family="sans-serif" font-size="14"><tspan >J</tspan></text><text font-weight="normal" x="110.0" font-family="sans-serif" font-size="14"><tspan >IT</tspan></text><text font-weight="normal" x="80.0" font-family="sans-serif" font-size="14"><tspan >Q</tspan></text><text font-weight="normal" x="60.0" font-family="sans-serif" font-size="14"><tspan >V</tspan></text><text font-weight="normal" x="40.0" font-family="sans-serif" font-size="14"><tspan >C</tspan></text><text font-weight="normal" x="20.0" font-family="sans-serif" font-size="14"><tspan >Z</tspan></text><text font-weight="normal" x="0.0" font-family="sans-serif" font-size="14"><tspan >N</tspan></text></g><g transform="translate(10.0, 80)"/></g></g></g></svg><div class="highlight-python"><div class="highlight"><pre>.. bitfield::
+    :bits: 32
+    :lanes: 1
+
+        [
+            { &quot;name&quot;: &quot;M&quot;,   &quot;bits&quot;: 5},
+            { &quot;name&quot;: &quot;T&quot;,   &quot;bits&quot;: 1},
+            { &quot;name&quot;: &quot;F&quot;,   &quot;bits&quot;: 1},
+            { &quot;name&quot;: &quot;I&quot;,   &quot;bits&quot;: 1},
+            { &quot;name&quot;: &quot;A&quot;,   &quot;bits&quot;: 1},
+            { &quot;name&quot;: &quot;E&quot;,   &quot;bits&quot;: 1},
+            { &quot;name&quot;: &quot;IT&quot;,  &quot;bits&quot;: 6, &quot;type&quot;: 2},
+            { &quot;name&quot;: &quot;GE&quot;,  &quot;bits&quot;: 4},
+            {                &quot;bits&quot;: 4},
+            { &quot;name&quot;: &quot;J&quot;,   &quot;bits&quot;: 1},
+            { &quot;name&quot;: &quot;IT&quot;,  &quot;bits&quot;: 2, &quot;type&quot;: 2},
+            { &quot;name&quot;: &quot;Q&quot;,   &quot;bits&quot;: 1},
+            { &quot;name&quot;: &quot;V&quot;,   &quot;bits&quot;: 1},
+            { &quot;name&quot;: &quot;C&quot;,   &quot;bits&quot;: 1},
+            { &quot;name&quot;: &quot;Z&quot;,   &quot;bits&quot;: 1},
+            { &quot;name&quot;: &quot;N&quot;,   &quot;bits&quot;: 1}
+        ]
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to sphinxcontrib-bitfield&#8217;s documentation!</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#enable-extension">Enable Extension</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Arthur Gay.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="_sources/index.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
