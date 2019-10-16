@@ -4,15 +4,13 @@ from setuptools import setup, find_packages
 
 long_desc = '''
 This package contains the bitfield Sphinx extension.
-
-.. add description here ..
 '''
 
-requires = ['Sphinx>=0.6']
+requires = ['Sphinx>=0.6', 'bit-field>=0.2.0']
 
 setup(
     name='sphinxcontrib-bitfield',
-    version='0.1',
+    version='0.2.0',
     url='https://github.com/Arth-ur/sphinxcontrib-bitfield',
     download_url='http://pypi.python.org/pypi/sphinxcontrib-bitfield',
     license='BSD',
