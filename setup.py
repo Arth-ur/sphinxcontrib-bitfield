@@ -6,7 +6,7 @@ long_desc = '''
 This package contains the bitfield Sphinx extension.
 '''
 
-requires = ['Sphinx>=0.6', 'bit-field>=0.2.0']
+requires = ['Sphinx>=0.6', 'bit-field>=0.3.0']
 
 setup(
     name='sphinxcontrib-bitfield',
