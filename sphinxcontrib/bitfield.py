@@ -1,6 +1,6 @@
 from docutils import nodes
 from docutils.parsers.rst import Directive
-from docutils.parsers.rst.directives import choice
+from docutils.parsers.rst.directives import choice, flag
 from bit_field import render, jsonml_stringify
 from json import loads
 from hashlib import sha1
@@ -11,6 +11,8 @@ class bitfield(nodes.General, nodes.Element):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.options = kwargs['options']
+        if 'compact' in self.options:
+            self.options['compact'] = True
 
 
 def visit_bitfield_html(self, node):
@@ -54,7 +56,8 @@ class BitfieldDirective(Directive):
         'fontsize': int,
         'endianness': lambda a: choice(a, ['big', 'little']),
         'fontfamily': str,
-        'fontweight': str
+        'fontweight': str,
+        'compact': flag
     }
 
     def run(self):
