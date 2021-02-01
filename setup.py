@@ -10,7 +10,7 @@ requires = ['Sphinx>=0.6', 'bit-field>=0.3.0']
 
 setup(
     name='sphinxcontrib-bitfield',
-    version='0.2.0',
+    version='0.3.0',
     url='https://github.com/Arth-ur/sphinxcontrib-bitfield',
     download_url='http://pypi.python.org/pypi/sphinxcontrib-bitfield',
     license='BSD',
