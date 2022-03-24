@@ -46,11 +46,15 @@ The `bitfield` directive accepts the following options:
         rectangle lanes - default 2
     bits:
         overall bitwidth - default 32
-    endianness:
-        default `little`, non implemented
     fontfamily:
         default sans-serif
     fontweight:
         default normal
     fontsize:
         default 14
+    compact:
+        compact rendering mode
+    hflip:
+        horizontal flip
+    vflip:
+        vertical flip

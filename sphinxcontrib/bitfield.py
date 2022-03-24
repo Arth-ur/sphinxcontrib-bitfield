@@ -11,8 +11,9 @@ class bitfield(nodes.General, nodes.Element):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.options = kwargs['options']
-        if 'compact' in self.options:
-            self.options['compact'] = True
+        self.options['compact'] = 'compact' in self.options
+        self.options['hflip'] = 'hflip' in self.options
+        self.options['vflip'] = 'vflip' in self.options
 
 
 def visit_bitfield_html(self, node):
@@ -54,10 +55,11 @@ class BitfieldDirective(Directive):
         'lanes': int,
         'bits': int,
         'fontsize': int,
-        'endianness': lambda a: choice(a, ['big', 'little']),
         'fontfamily': str,
         'fontweight': str,
-        'compact': flag
+        'compact': flag,
+        'hflip': flag,
+        'vflip': flag,
     }
 
     def run(self):
