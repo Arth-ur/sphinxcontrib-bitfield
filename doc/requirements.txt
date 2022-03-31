@@ -1,2 +1,0 @@
-sphinxcontrib-bitfield==0.1
-bit_field==0.1.0
