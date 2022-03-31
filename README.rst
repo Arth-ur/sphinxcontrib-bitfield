@@ -58,3 +58,5 @@ The `bitfield` directive accepts the following options:
         horizontal flip
     vflip:
         vertical flip
+
+For more details, see the `bit_field <https://github.com/Arth-ur/bitfield>`_ package.
