@@ -1,6 +1,8 @@
 sphinxcontrib-bitfield
 ======================
 
+A `Sphinx <https://www.sphinx-doc.org/en/master/>`_ extension to generate bit field diagrams with
+the `bit_field <https://github.com/Arth-ur/bitfield>`_ Python package.
 
 Installation
 ------------
@@ -8,6 +10,13 @@ Installation
 ::
 
     pip install sphinxcontrib-bitfield
+
+
+To install with LaTeX support:
+
+::
+
+    pip install sphinxcontrib-bitfield[LaTeX]
 
 
 Enable Extension

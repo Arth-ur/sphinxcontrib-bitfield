@@ -5,6 +5,7 @@ from bit_field import render, jsonml_stringify
 from json import loads
 from hashlib import sha1
 from os.path import join
+from sphinx.errors import ExtensionError
 
 
 class bitfield(nodes.General, nodes.Element):
@@ -31,7 +32,13 @@ def visit_bitfield_html(self, node):
 
 
 def visit_bitfield_latex(self, node):
-    from cairosvg import svg2pdf
+    try:
+        from cairosvg import svg2pdf
+    except ModuleNotFoundError as e:
+        raise ExtensionError('Please install optional requirements to enable '
+                             'LateX support:\n'
+                             '  pip install sphinxcontrib-bitfield[LaTeX]', e)
+
     svg = jsonml_stringify(
         render(
             loads(' '.join(node.rawsource)),
