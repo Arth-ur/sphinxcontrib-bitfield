@@ -11,7 +11,7 @@ from sphinx.errors import ExtensionError
 class bitfield(nodes.General, nodes.Element):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.options = kwargs['options']
+        self.options = dict(kwargs['options'])
         self.options['compact'] = 'compact' in self.options
         self.options['hflip'] = 'hflip' in self.options
         self.options['vflip'] = 'vflip' in self.options
