@@ -12,12 +12,9 @@ class bitfield(nodes.General, nodes.Element):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.options = kwargs['options']
-        if 'compact' not in self.options:
-            self.options['compact'] = False
-        if 'hflip' not in self.options:
-            self.options['hflip'] = False
-        if 'vflip' not in self.options:
-            self.options['vflip'] = False
+        self.options['compact'] = 'compact' in self.options
+        self.options['hflip'] = 'hflip' in self.options
+        self.options['vflip'] = 'vflip' in self.options
 
 
 def visit_bitfield_html(self, node):
