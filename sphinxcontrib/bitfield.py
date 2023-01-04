@@ -1,6 +1,6 @@
 from docutils import nodes
 from docutils.parsers.rst import Directive
-from docutils.parsers.rst.directives import choice, flag
+from docutils.parsers.rst.directives import flag
 from bit_field import render, jsonml_stringify
 from json import loads
 from hashlib import sha1
