@@ -65,6 +65,7 @@ class BitfieldDirective(Directive):
         'fontsize': float,
         'fontfamily': str,
         'fontweight': str,
+        'strokewidth': float,
         'compact': flag,
         'hflip': flag,
         'vflip': flag,

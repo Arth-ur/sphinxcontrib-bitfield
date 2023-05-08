@@ -61,6 +61,8 @@ The `bitfield` directive accepts the following options:
         default normal
     fontsize:
         default 14
+    strokewidth:
+        default 1
     compact:
         compact rendering mode
     hflip:
