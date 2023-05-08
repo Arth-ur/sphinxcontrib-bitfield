@@ -69,5 +69,7 @@ The `bitfield` directive accepts the following options:
         vertical flip
     uneven:
         uneven lanes
+    trim:
+        trim long bitfield names, must provide the horizontal space available for a single character
 
 For more details, see the `bit_field <https://github.com/Arth-ur/bitfield>`_ package.

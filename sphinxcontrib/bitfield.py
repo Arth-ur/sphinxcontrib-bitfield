@@ -69,6 +69,7 @@ class BitfieldDirective(Directive):
         'hflip': flag,
         'vflip': flag,
         'uneven': flag,
+        'trim': float,
     }
 
     def run(self):
