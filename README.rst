@@ -73,5 +73,7 @@ The `bitfield` directive accepts the following options:
         uneven lanes
     trim:
         trim long bitfield names, must provide the horizontal space available for a single character
+    legend:
+        space separated list of name and type optionally enclosed in quotes
 
 For more details, see the `bit_field <https://github.com/Arth-ur/bitfield>`_ package.

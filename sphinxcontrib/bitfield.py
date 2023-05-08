@@ -6,6 +6,7 @@ from json import loads
 from hashlib import sha1
 from os.path import join
 from sphinx.errors import ExtensionError
+from shlex import split
 
 
 class bitfield(nodes.General, nodes.Element):
@@ -55,6 +56,11 @@ def depart_bitfield(self, node):
     pass
 
 
+def legend(s):
+    x = split(s)
+    return {k: v for k, v in zip(x[0::2], x[1::2])}
+
+
 class BitfieldDirective(Directive):
     has_content = True
     option_spec = {
@@ -71,6 +77,7 @@ class BitfieldDirective(Directive):
         'vflip': flag,
         'uneven': flag,
         'trim': float,
+        'legend': legend,
     }
 
     def run(self):
