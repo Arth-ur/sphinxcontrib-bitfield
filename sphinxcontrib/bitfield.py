@@ -57,11 +57,11 @@ def depart_bitfield(self, node):
 class BitfieldDirective(Directive):
     has_content = True
     option_spec = {
-        'vspace': int,
-        'hspace': int,
+        'vspace': float,
+        'hspace': float,
         'lanes': int,
         'bits': int,
-        'fontsize': int,
+        'fontsize': float,
         'fontfamily': str,
         'fontweight': str,
         'compact': flag,
