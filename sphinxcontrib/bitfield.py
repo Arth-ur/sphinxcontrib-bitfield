@@ -15,6 +15,7 @@ class bitfield(nodes.General, nodes.Element):
         self.options['compact'] = 'compact' in self.options
         self.options['hflip'] = 'hflip' in self.options
         self.options['vflip'] = 'vflip' in self.options
+        self.options['uneven'] = 'uneven' in self.options
 
 
 def visit_bitfield_html(self, node):
@@ -67,6 +68,7 @@ class BitfieldDirective(Directive):
         'compact': flag,
         'hflip': flag,
         'vflip': flag,
+        'uneven': flag,
     }
 
     def run(self):
