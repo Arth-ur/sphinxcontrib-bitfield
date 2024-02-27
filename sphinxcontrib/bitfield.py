@@ -10,16 +10,22 @@ from shlex import split
 
 
 class bitfield(nodes.General, nodes.Element):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.options = dict(kwargs['options'])
-        self.options['compact'] = 'compact' in self.options
-        self.options['hflip'] = 'hflip' in self.options
-        self.options['vflip'] = 'vflip' in self.options
-        self.options['uneven'] = 'uneven' in self.options
+    pass
+
+
+def set_bitfield_options(node: bitfield):
+    """
+    Set boolean flags based on user-provided options
+    """
+    node.options = node.attributes.get('options', {})
+    node.options['compact'] = 'compact' in node.options
+    node.options['hflip'] = 'hflip' in node.options
+    node.options['vflip'] = 'vflip' in node.options
+    node.options['uneven'] = 'uneven' in node.options
 
 
 def visit_bitfield_html(self, node):
+    set_bitfield_options(node)
     self.body.append(
         jsonml_stringify(
             render(
@@ -38,6 +44,7 @@ def visit_bitfield_latex(self, node):
                              'LateX support:\n'
                              '  pip install sphinxcontrib-bitfield[LaTeX]', e)
 
+    set_bitfield_options(node)
     svg = jsonml_stringify(
         render(
             loads(' '.join(node.rawsource)),
