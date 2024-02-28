@@ -75,5 +75,7 @@ The `bitfield` directive accepts the following options:
         trim long bitfield names, must provide the horizontal space available for a single character
     legend:
         space separated list of name and type optionally enclosed in quotes
+    caption:
+        String caption for the bitfield. If specified, the bitfield will be rendered as a figure
 
 For more details, see the `bit_field <https://github.com/Arth-ur/bitfield>`_ package.
