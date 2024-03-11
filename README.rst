@@ -12,19 +12,19 @@ Installation
     pip install sphinxcontrib-bitfield
 
 
-To install with LaTeX support:
-
-::
-
-    pip install sphinxcontrib-bitfield[LaTeX]
-
-
 Enable Extension
 -----------------
 
 Add `sphinxcontrib.bitfield` in `extensions` of `conf.py`::
 
     extensions = ['sphinxcontrib.bitfield']
+
+
+To enable output with LaTeX support, add an image converter from SVG to PNG:
+
+::
+
+    extensions = ['sphinx.ext.imgconverter', 'sphinxcontrib.bitfield']
 
 
 Usage
