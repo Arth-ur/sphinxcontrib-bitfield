@@ -1,6 +1,5 @@
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
-from docutils.parsers.rst.directives import flag
 from bit_field import render, jsonml_stringify
 from json import loads
 from shlex import split
@@ -12,6 +11,14 @@ from sphinx.util.nodes import set_source_info
 def legend(s):
     x = split(s)
     return {k: v for k, v in zip(x[0::2], x[1::2])}
+
+
+def flag_present(argument):
+    """Set option value = True if option was set by user"""
+    if argument and argument.strip():
+        raise ValueError('no argument is allowed; "%s" supplied' % argument)
+    else:
+        return True
 
 
 def figure_wrapper(directive, children, caption) -> nodes.figure:
@@ -38,10 +45,10 @@ class BitfieldDirective(Directive):
         'fontfamily': str,
         'fontweight': str,
         'strokewidth': float,
-        'compact': flag,
-        'hflip': flag,
-        'vflip': flag,
-        'uneven': flag,
+        'compact': flag_present,
+        'hflip': flag_present,
+        'vflip': flag_present,
+        'uneven': flag_present,
         'trim': float,
         'legend': legend,
         'caption': directives.unchanged,
